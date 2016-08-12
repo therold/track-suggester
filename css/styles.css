@@ -1,0 +1,8 @@
+.result {
+  display: none;
+}
+
+#name-label {
+  margin-top: 5px;
+  text-align: center;
+}
