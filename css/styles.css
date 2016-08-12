@@ -3,21 +3,43 @@
   display: none;
 }
 
-.carousel-nav {
-  bottom: 0;
-  /* border-color: black;
-  color: black;
-  background-color: black; */
+.result {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  background-color: rgb(242, 242, 242);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.result-header {
+  display: inline-block;
+  vertical-align: middle;
+  height: 25px;
+  width: auto;
+  float: none;
+  text-align: center;
 }
 
 .carousel-indicators {
   bottom: 0;
 }
 
+.carousel-indicators li {
+  background-color: #999;
+  background-color: rgba(70,70,70,.25);
+}
+
+.carousel-indicators .active {
+  background-color: #444;
+}
+
 #name-label {
   margin-top: 5px;
   text-align: center;
 }
+
 .item label {
   margin-top: 0px;
 }
