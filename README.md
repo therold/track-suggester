@@ -14,6 +14,8 @@ _give the user a suggestion of which Epicodus track may fit them best._
 
 * _No setup is required._
 * _Simply open index.html in a web browser._
+* _This page can be viewed on GitHub by [clicking here] (https://therold.github.io/track-suggester/).
+
 
 ## Technologies Used
 

@@ -1,17 +1,21 @@
 var first_name;
 var last_name;
 $(document).ready(function() {
+  /* This function triggers on radio selection change. */
   $("input[type=radio]").on("select change", function(event) {
     if (checkForName()) {
      if ($("div.active").index() === 4) {
-        $("form#user-input").submit();
+        /* On last slide, submit form */
+       $("form#user-input").submit();
       } else {
+        /* Not on last slide, go to next slide */
         $("#carousel").carousel("next");
       }
     }
     event.preventDefault();
   });
 
+  /* This function triggers when the #first_name text input loses focus. Mostly to clear helper text if necessary. */
   $("input#first_name").on("blur", function(event) {
     firstName = $("#first_name").val();
     if (firstName) {
@@ -20,6 +24,7 @@ $(document).ready(function() {
     }
   });
 
+  /* This function triggers when the #last_name text input loses focus. Mostly to clear helper text if necessary. */
   $("input#last_name").on("blur", function(event) {
     lastName = $("#last_name").val();
     if (lastName) {
@@ -145,24 +150,32 @@ $(document).ready(function() {
 
       /* Setting up the progress bars for the score modal */
       $("#ruby-progress").css("width", (rubyRails / max * 100) +  "%");
+      $("#ruby-progress-pct").text((rubyRails / max * 100) +  "%");
       $("#php-progress").css("width", (phpDrupal / max * 100) +  "%");
+      $("#php-progress-pct").text((phpDrupal / max * 100) +  "%");
       $("#java-progress").css("width", (javaAndroid / max * 100) +  "%");
+      $("#java-progress-pct").text((javaAndroid / max * 100) +  "%");
       $("#css-progress").css("width", (cssDesign / max * 100) +  "%");
+      $("#css-progress-pct").text((cssDesign / max * 100) +  "%");
       $("#csharp-progress").css("width", (csharpDotnet / max * 100) +  "%");
+      $("#csharp-progress-pct").text((csharpDotnet / max * 100) +  "%");
       event.preventDefault();
 
   });
 
   $("#btn-retake").on("click", function(event) {
-    $(".result").hide();
-    $(".results").hide();
-    $("form#user-input")[0].reset();
-    $("#carousel").carousel(0);
-    $(".form").show();
+    $(".results").slideUp(function() {
+      $(".result").hide();
+      $("form#user-input")[0].reset();
+      $("#carousel").carousel(0);
+      $(".form").slideDown();
+    });
+
     event.preventDefault();
   });
 });
 
+/* We use this function to make sure the user has entered their name in the survey. If not, style the input box and give them a hint. */
 var checkForName = function() {
   firstName = $("#first_name").val();
   lastName = $("#last_name").val();
@@ -188,15 +201,16 @@ var checkForName = function() {
 }
 
 displayResult = function(result, resultNumber) {
-  $(".form").hide();
-  $("span.first_name").text(firstName);
-  $("span.last_name").text(lastName);
-  /* Change the verbage used based off whether this is the first result displayed, or any other result after the first one */
-  if (resultNumber === 0) {
-    $(result + " .result_number").text("ought to");
-  } else {
-    $(result + " .result_number").text("could also")
-  }
-  $(result).show();
-  $(".results").show()
+  $(".form").slideUp(function() {
+    $("span.first_name").text(firstName);
+    $("span.last_name").text(lastName);
+    /* Change the verbage used based off whether this is the first result displayed, or any other result after the first one */
+    if (resultNumber === 0) {
+      $(result + " .result_number").text("ought to");
+    } else {
+      $(result + " .result_number").text("could also")
+    }
+    $(result).show();
+    $(".results").slideDown();
+  });
 }

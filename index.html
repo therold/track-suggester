@@ -10,10 +10,14 @@
     <title>Which Epicodus track is right for you?</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Which Epicodus track is right for you?</h1>
+      <div class="header">
+        <div class="container">
+          <h1>Which Epicodus track is right for you?</h1>
+        </div>
+      </div>
+      <div class="container">
       <div class="form"><!-- BEGIN FORM -->
-        <h3>Simply take this brief survey and we'll help determine which track best fits you!</h3>
+        <h3>Simply take this brief survey and we'll help determine which track fits you best!</h3>
         <form id="user-input">
           <div class="row">
             <div class="col-md-6 form-group first_name">
@@ -240,6 +244,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
             <h4>Your scores for all tracks</h4>
           </div>
           <div class="modal-body">
@@ -249,6 +254,7 @@
               </div>
               <div class="col-xs-10">
                 <div class="progress">
+                  <span id="ruby-progress-pct" class="progress-overlay"></span>
                   <div id="ruby-progress" class="progress-bar progress-bar-info" role="progressbar">
                   </div>
                 </div>
@@ -260,6 +266,7 @@
               </div>
               <div class="col-xs-10">
                 <div class="progress">
+                  <span id="php-progress-pct" class="progress-overlay"></span>
                   <div id="drupal-progress" class="progress-bar progress-bar-info" role="progressbar">
                   </div>
                 </div>
@@ -271,6 +278,7 @@
               </div>
               <div class="col-xs-10">
                 <div class="progress">
+                  <span id="java-progress-pct"class="progress-overlay"></span>
                   <div id="java-progress" class="progress-bar progress-bar-info" role="progressbar">
                   </div>
                 </div>
@@ -282,6 +290,7 @@
               </div>
               <div class="col-xs-10">
                 <div class="progress">
+                  <span id="css-progress-pct" class="progress-overlay"></span>
                   <div id="css-progress" class="progress-bar progress-bar-info" role="progressbar">
                   </div>
                 </div>
@@ -293,6 +302,7 @@
               </div>
               <div class="col-xs-10">
                 <div class="progress">
+                  <span id="csharp-progress-pct" class="progress-overlay"></span>
                   <div id=csharp-progress class="progress-bar progress-bar-info" role="progressbar">
                   </div>
                 </div>
