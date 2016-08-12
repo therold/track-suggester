@@ -16,13 +16,15 @@
         <h3>Simply take this brief survey and we'll help determine which track best fits you!</h3>
         <form id="user-input">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 form-group first_name">
               <label class="control-label">First name:</label>
               <input id="first_name" class="form-control" type="text" placeholder="First name">
+              <span class="first_name_errorhint help-block"></span>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 form-group last_name">
               <label class="control-label">Last name:</label>
               <input id="last_name" class="form-control" type="text" placeholder="Last name">
+              <span class="last_name_errorhint help-block"></span>
             </div>
           </div>
           <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="0" data-wrap="false">
@@ -38,7 +40,7 @@
                 <label class="control-label radio inline">How do you feel about developing web applications?</label><!-- BEGIN FIRST RADIO SECTION -->
                 <div class="radio">
                   <label>
-                    <input type="radio" name="question1" value="1" checked>
+                    <input type="radio" name="question1" value="1">
                     Sounds awesome! I would love working on the web.
                   </label>
                 </div>
@@ -65,7 +67,7 @@
                 <label class="control-label radio inline">How do you feel about working for a large corporation?</label><!-- BEGIN SECOND RADIO SECTION -->
                 <div class="radio">
                   <label>
-                    <input type="radio" name="question2" value="1" checked>
+                    <input type="radio" name="question2" value="1">
                     Sounds amazing! I would love to work for a large corporation.
                   </label>
                 </div>
@@ -92,7 +94,7 @@
                 <label class="control-label radio inline">How do you feel about designing user interfaces?</label><!-- BEGIN THIRD RADIO SECTION -->
                 <div class="radio">
                   <label>
-                    <input type="radio" name="question3" value="1" checked>
+                    <input type="radio" name="question3" value="1">
                     Sounds amazing! I love working in user interface design.
                   </label>
                 </div>
@@ -119,7 +121,7 @@
                 <label class="control-label radio inline">How would you feel about working for a start-up company?</label><!-- BEGIN FOURTH RADIO SECTION -->
                 <div class="radio">
                   <label>
-                    <input type="radio" name="question4" value="1" checked>
+                    <input type="radio" name="question4" value="1">
                     Sounds amazing! I'd love to get in on the ground floor.
                   </label>
                 </div>
@@ -146,7 +148,7 @@
                 <label class="control-label radio inline">What type of programming sounds like the most fun?</label><!-- BEGIN FIFTH RADIO SECTION -->
                 <div class="radio">
                   <label>
-                    <input type="radio" name="question5" value="1" checked>
+                    <input type="radio" name="question5" value="1">
                     I'd love to build content-heavy websites.
                   </label>
                 </div>
