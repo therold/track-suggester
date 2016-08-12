@@ -149,16 +149,37 @@ $(document).ready(function() {
       }
 
       /* Setting up the progress bars for the score modal */
-      $("#ruby-progress").css("width", (rubyRails / max * 100) +  "%");
-      $("#ruby-progress-pct").text((rubyRails / max * 100) +  "%");
-      $("#php-progress").css("width", (phpDrupal / max * 100) +  "%");
-      $("#php-progress-pct").text((phpDrupal / max * 100) +  "%");
-      $("#java-progress").css("width", (javaAndroid / max * 100) +  "%");
-      $("#java-progress-pct").text((javaAndroid / max * 100) +  "%");
-      $("#css-progress").css("width", (cssDesign / max * 100) +  "%");
-      $("#css-progress-pct").text((cssDesign / max * 100) +  "%");
-      $("#csharp-progress").css("width", (csharpDotnet / max * 100) +  "%");
-      $("#csharp-progress-pct").text((csharpDotnet / max * 100) +  "%");
+      var rubyPct = (rubyRails / max * 100).toFixed(0);
+      var phpPct = (phpDrupal / max * 100).toFixed(0);
+      var javaPct = (javaAndroid / max * 100).toFixed(0);
+      var cssPct = (cssDesign / max * 100).toFixed(0);
+      var csharpPct = (csharpDotnet / max * 100).toFixed(0);
+
+      if (rubyPct < 0) {
+        rubyPct = 0;
+      }
+      if (phpPct < 0) {
+        phpPct = 0;
+      }
+      if (javaPct < 0) {
+        javaPct = 0;
+      }
+      if (cssPct < 0) {
+        cssPct = 0;
+      }
+      if (csharpPct < 0) {
+        csharpPct = 0;
+      }
+      $("#ruby-progress").css("width", rubyPct +  "%");
+      $("#ruby-progress-pct").text(rubyPct +  "%");
+      $("#php-progress").css("width", phpPct +  "%");
+      $("#php-progress-pct").text(phpPct +  "%");
+      $("#java-progress").css("width", javaPct +  "%");
+      $("#java-progress-pct").text(javaPct +  "%");
+      $("#css-progress").css("width", cssPct +  "%");
+      $("#css-progress-pct").text(cssPct +  "%");
+      $("#csharp-progress").css("width", csharpPct +  "%");
+      $("#csharp-progress-pct").text(csharpPct +  "%");
       event.preventDefault();
 
   });
