@@ -142,6 +142,13 @@ $(document).ready(function() {
         displayResult(".csharp-dotnet", resultNumber);
         resultNumber += 1;
       }
+
+      /* Setting up the progress bars for the score modal */
+      $("#ruby-progress").css("width", (rubyRails / max * 100) +  "%");
+      $("#php-progress").css("width", (phpDrupal / max * 100) +  "%");
+      $("#java-progress").css("width", (javaAndroid / max * 100) +  "%");
+      $("#css-progress").css("width", (cssDesign / max * 100) +  "%");
+      $("#csharp-progress").css("width", (csharpDotnet / max * 100) +  "%");
       event.preventDefault();
 
   });

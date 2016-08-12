@@ -230,9 +230,77 @@
           <p>See the Epicodus pages for <a href="http://www.epicodus.com/c-sharp">C#</a> and <a href="http://www.epicodus.com/drupal">.NET</a> for more information.</p>
         </div>
         <div class="text-center">
+          <button class="btn btn-default" data-toggle="modal" href="#otherResultsModal">View your score</button>
           <button id="btn-retake" class="btn btn-success">Take survey again</button>
         </div>
       </div><!-- END RESULTS -->
+    </div>
+
+    <div class="modal fade" id="otherResultsModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Your scores for all tracks</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-2">
+                <label>Ruby/Rails</label>
+              </div>
+              <div class="col-xs-10">
+                <div class="progress">
+                  <div id="ruby-progress" class="progress-bar progress-bar-info" role="progressbar">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-2">
+                <label>PHP/Drupal</label>
+              </div>
+              <div class="col-xs-10">
+                <div class="progress">
+                  <div id="drupal-progress" class="progress-bar progress-bar-info" role="progressbar">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-2">
+                <label>Java/Android</label>
+              </div>
+              <div class="col-xs-10">
+                <div class="progress">
+                  <div id="java-progress" class="progress-bar progress-bar-info" role="progressbar">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-2">
+                <label>CSS/Design</label>
+              </div>
+              <div class="col-xs-10">
+                <div class="progress">
+                  <div id="css-progress" class="progress-bar progress-bar-info" role="progressbar">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-2">
+                <label>C#/.Net</label>
+              </div>
+              <div class="col-xs-10">
+                <div class="progress">
+                  <div id=csharp-progress class="progress-bar progress-bar-info" role="progressbar">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
