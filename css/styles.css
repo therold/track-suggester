@@ -3,7 +3,34 @@
   display: none;
 }
 
+.carousel-nav {
+  bottom: 0;
+  /* border-color: black;
+  color: black;
+  background-color: black; */
+}
+
+.carousel-indicators {
+  bottom: 0;
+}
+
 #name-label {
   margin-top: 5px;
   text-align: center;
+}
+.item label {
+  margin-top: 0px;
+}
+
+#carousel {
+  border-radius: 10px;
+  background-color: #F2F2F2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.item {
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-bottom:40px;
+
 }

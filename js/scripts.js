@@ -94,7 +94,6 @@ $(document).ready(function() {
     } else if (fifthAnswer === 4) {
       csharpDotnet += 15;
     }
-debugger;
     /* Now we determine which epicodus path has the greatest score and display that result. */
     var max = Math.max(rubyRails, phpDrupal, javaAndroid, cssDesign, csharpDotnet);
     /* Display the highest result. In the case of a tie, display both and change the verbage a bit. */
@@ -126,7 +125,17 @@ debugger;
     $(".result").hide();
     $(".results").hide();
     $("form#user-input")[0].reset();
+    $("#carousel").carousel(0);
     $(".form").show();
+    event.preventDefault();
+  });
+
+  $("input[type=radio]").on("select change", function(event) {
+    if ($("div.active").index() === 4) {
+      $("form#user-input").submit();
+    } else {
+      $("#carousel").carousel("next");
+    }
     event.preventDefault();
   });
 });

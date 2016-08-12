@@ -5,6 +5,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>Which Epicodus track is right for you?</title>
   </head>
@@ -14,155 +15,162 @@
       <div class="form"><!-- BEGIN FORM -->
         <h3>Simply take this brief survey and we'll help determine which track best fits you!</h3>
         <form id="user-input">
-            <div class="row">
-              <div class="col-md-6">
-                <label class="control-label">First name:</label>
-                <input id="first_name" class="form-control" type="text" placeholder="First name">
-              </div>
-              <div class="col-md-6">
-                <label class="control-label">Last name:</label>
-                <input id="last_name" class="form-control" type="text" placeholder="Last name">
-              </div>
-            </div>
           <div class="row">
             <div class="col-md-6">
-              <label class="control-label radio inline">How do you feel about developing web applications?</label><!-- BEGIN FIRST RADIO SECTION -->
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question1" value="1" checked>
-                  Sounds awesome! I would love working on the web.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question1" value="2">
-                  I could get into that.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question1" value="3">
-                  That doesn't sound like much fun.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question1" value="4">
-                  No way! I can't stand web development.
-                </label>
-              </div><!-- END FIRST RADIO SECTION -->
+              <label class="control-label">First name:</label>
+              <input id="first_name" class="form-control" type="text" placeholder="First name">
             </div>
             <div class="col-md-6">
-              <label class="control-label radio inline">How do you feel about working for a large corporation?</label><!-- BEGIN SECOND RADIO SECTION -->
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question2" value="1" checked>
-                  Sounds amazing! I would love to work for a large corporation.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question2" value="2">
-                  I think I could get into working for a large corporation.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question2" value="3">
-                  I would prefer not to work for a large corporation.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question2" value="4">
-                  I couldnt stand working for a large corporation.
-                </label>
-              </div><!-- END SECOND RADIO SECTION -->
-            </div>
-            <div class="col-md-6">
-              <label class="control-label radio inline">How do you feel about designing user interfaces?</label><!-- BEGIN THIRD RADIO SECTION -->
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question3" value="1" checked>
-                  Sounds amazing! I love working in user interface design.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question3" value="2">
-                  I could get into designing user interfaces.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question3" value="3">
-                  I don't think i'd like to design user interfaces.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question3" value="4">
-                  No way! I hate designing user interfaces.
-                </label>
-              </div><!-- END THRID RADIO SECTION -->
-            </div>
-            <div class="col-md-6">
-              <label class="control-label radio inline">How would you feel about working for a start-up company?</label><!-- BEGIN FOURTH RADIO SECTION -->
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question4" value="1" checked>
-                  Sounds amazing! I'd love to get in on the ground floor.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question4" value="2">
-                  I could enjoy working for a start-up company.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question4" value="3">
-                  I don't think I'd like to work for a start-up company.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question4" value="4">
-                  No way! I'd never want to work for a start-up company.
-                </label>
-              </div><!-- END FOURTH RADIO SECTION -->
-            </div>
-            <div class="col-md-6">
-              <label class="control-label radio inline">What type of programming sounds like the most fun?</label><!-- BEGIN FIFTH RADIO SECTION -->
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question5" value="1" checked>
-                  I'd love to build content-heavy websites.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question5" value="2">
-                  I'd love to build highly-interactive websites.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question5" value="3">
-                  I'd love to build mobile applications.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="question5" value="4">
-                  I'd love to build custom desktop applications.
-                </label>
-              </div><!-- END FIFTH RADIO SECTION -->
+              <label class="control-label">Last name:</label>
+              <input id="last_name" class="form-control" type="text" placeholder="Last name">
             </div>
           </div>
-          <button class="btn btn-success" type="submit">Submit</button>
-          <button class="btn btn-danger" type="reset">Reset</button>
+          <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="0" data-wrap="false">
+            <ol class="carousel-indicators">
+             <li data-target="#carousel" data-slide-to="0" class="active carousel-nav"></li>
+             <li data-target="#carousel" data-slide-to="1" class="carousel-nav"></li>
+             <li data-target="#carousel" data-slide-to="2" class="carousel-nav"></li>
+             <li data-target="#carousel" data-slide-to="3" class="carousel-nav"></li>
+             <li data-target="#carousel" data-slide-to="4" class="carousel-nav"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active">
+                <label class="control-label radio inline">How do you feel about developing web applications?</label><!-- BEGIN FIRST RADIO SECTION -->
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question1" value="1" checked>
+                    Sounds awesome! I would love working on the web.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question1" value="2">
+                    I could get into that.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question1" value="3">
+                    That doesn't sound like much fun.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question1" value="4">
+                    No way! I can't stand web development.
+                  </label>
+                </div><!-- END FIRST RADIO SECTION -->
+              </div>
+              <div class="item">
+                <label class="control-label radio inline">How do you feel about working for a large corporation?</label><!-- BEGIN SECOND RADIO SECTION -->
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question2" value="1" checked>
+                    Sounds amazing! I would love to work for a large corporation.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question2" value="2">
+                    I think I could get into working for a large corporation.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question2" value="3">
+                    I would prefer not to work for a large corporation.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question2" value="4">
+                    I couldnt stand working for a large corporation.
+                  </label>
+                </div><!-- END SECOND RADIO SECTION -->
+              </div>
+              <div class="item">
+                <label class="control-label radio inline">How do you feel about designing user interfaces?</label><!-- BEGIN THIRD RADIO SECTION -->
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question3" value="1" checked>
+                    Sounds amazing! I love working in user interface design.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question3" value="2">
+                    I could get into designing user interfaces.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question3" value="3">
+                    I don't think i'd like to design user interfaces.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question3" value="4">
+                    No way! I hate designing user interfaces.
+                  </label>
+                </div><!-- END THRID RADIO SECTION -->
+              </div>
+              <div class="item">
+                <label class="control-label radio inline">How would you feel about working for a start-up company?</label><!-- BEGIN FOURTH RADIO SECTION -->
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question4" value="1" checked>
+                    Sounds amazing! I'd love to get in on the ground floor.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question4" value="2">
+                    I could enjoy working for a start-up company.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question4" value="3">
+                    I don't think I'd like to work for a start-up company.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question4" value="4">
+                    No way! I'd never want to work for a start-up company.
+                  </label>
+                </div><!-- END FOURTH RADIO SECTION -->
+              </div>
+              <div class="item">
+                <label class="control-label radio inline">What type of programming sounds like the most fun?</label><!-- BEGIN FIFTH RADIO SECTION -->
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question5" value="1" checked>
+                    I'd love to build content-heavy websites.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question5" value="2">
+                    I'd love to build highly-interactive websites.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question5" value="3">
+                    I'd love to build mobile applications.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="question5" value="4">
+                    I'd love to build custom desktop applications.
+                  </label>
+                </div><!-- END FIFTH RADIO SECTION -->
+              </div>
+            </div>
+          </div>
         </form>
       </div><!-- END FORM -->
       <div class="results"><!-- BEGIN RESULTS -->
